@@ -1,0 +1,8 @@
+---
+python_version: python3
+ansistrano_deploy_to: /mnt/persist/www/acme_blog
+database_name: acme_blog
+database_user: acme_blog
+project_slug: acme_blog
+domain_stage: stage-blog.acme.com
+domain_prod: blog.acme.com

@@ -1,0 +1,8 @@
+webservers:
+  hosts:
+    prod1:
+      ansible_user: deploy
+      ansible_port: 22
+      ansible_host: blog.acme.com
+      domain: blog.acme.com
+      stage_name: prod
