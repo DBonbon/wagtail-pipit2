@@ -10,7 +10,10 @@ class ArticlePageSerializer(BasePageSerializer):
 
     class Meta:
         model = ArticlePage
-        fields = BasePageSerializer.Meta.fields + ["rich_text"]
+        fields = BasePageSerializer.Meta.fields + [
+            "rich_text",
+            "body",
+        ]
 
     def get_rich_text(self, page):
         return expand_db_html(page.rich_text)

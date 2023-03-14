@@ -42,21 +42,18 @@ const CardsPage = ({ title, intro, cards, seoMetaRobots, slug, seoTitle, cardTit
                 ))}
              </div>
 
-               <div>
-               <div>
-               11111111111111111111
-               </div>
-                <p></p>
-                {cards.map((value, key) => (
-                <div>{value.id}</div>
+333333
+             <div>
+                {cards.map((card, key) => (
+                <h1>{card.type}
+                    <p>{card.value.cardTitle}</p>
+                    <p>{card.value.cardSubtitle}</p>
+                </h1>
                 ))}
              </div>
 
-            <ul>
-            {cards.map((name) => (
-            <li key={name.id}>{name.id}</li>
-             ))}
-            </ul>
+
+
 
             <p>seo_meta_robots={seoMetaRobots} </p>
              <p>My-SEO: {seoTitle} </p>

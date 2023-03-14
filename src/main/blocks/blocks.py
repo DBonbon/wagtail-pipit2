@@ -16,11 +16,25 @@ from wagtail.core.blocks import (
     TextBlock,
     URLBlock,
 )
+from wagtail.core.blocks import RichTextBlock
+from wagtail.rich_text import expand_db_html
 from wagtail.core import blocks
 from wagtail.images.blocks import ImageChooserBlock
 from django.conf import settings
 from typing import Any, Dict, Optional
+#from main.fields.fields import ImageRenditionField
 
+class CustomRichTextBlock(RichTextBlock):
+    def get_api_representation(self, value, context=None):
+        return expand_db_html(value.source)
+
+
+"""class CustomImageChooserBlock(ImageChooserBlock):
+    def get_api_representation(self, value, context=None):
+        return ImageRenditionField(
+            ["width-512", "width-1024", "width-1536"]
+        ).to_representation(value)
+"""
 
 SPEECH_TYPES = (
         ('verb', 'Verb'),
